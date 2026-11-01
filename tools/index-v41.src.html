@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="paymove-www-version" content="v4.1">
+<title>Paymove Agentic Stack · płatności dla agentów AI (podgląd v4.1)</title>
+<meta name="description" content="Powiedz, co kupić. Agent składa koszyk, Ty potwierdzasz BLIK-iem.">
+<link rel="preload" href="assets/fonts/Geologica-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/icons/remixicon.css">
+<link rel="stylesheet" href="assets/hero-base.css">
+<link rel="stylesheet" href="assets/hero-a.css">
+<link rel="stylesheet" href="assets/v41.css">
+<link rel="icon" href="assets/img/sygnet.svg">
+</head>
+<body class="hx hx-a v4 theme-dark" data-version="v4.1">
+<a class="skip" href="#main">Przejdź do treści</a>
+<header class="nav theme-dark" id="top">
+  <div class="wrap">
+    <a class="nav-logo" href="#top" aria-label="Paymove, początek strony"><img src="assets/img/logo-white.svg" alt="Paymove" width="114" height="20"></a>
+    <nav class="nav-links" id="nav-links" aria-label="Sekcje">
+      <a href="#filary">Filary</a><a href="#glos">Głos</a><a href="#deweloperzy">Deweloperzy</a><a href="#kontrola">Kontrola</a><a href="#premiera">Premiera</a>
+    </nav>
+    <a class="nav-login" href="https://www.paymove.io/">Zaloguj</a>
+    <a class="btn btn-metal btn-sm" href="#start"><span class="d-only">Dołącz do premiery</span><span class="m-only">Dołącz</span> <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+    <button class="nav-menu" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><i class="ri-menu-line" aria-hidden="true"></i></button>
+  </div>
+</header>
+<main id="main">
+<section class="hx-hero" id="hero">
+  <div class="wrap hx-grid">
+    <div class="hx-copy">
+      <h1>Powiedz, co&nbsp;kupić. <span>Agent zapłaci.</span></h1>
+      <p class="lead">Agent składa koszyk w&nbsp;615 usługach. Ty potwierdzasz BLIK-iem.</p>
+      <div class="ctas">
+        <a class="btn btn-metal glow" href="#start">Dołącz do premiery <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost" href="#deweloperzy"><i class="ri-terminal-box-line" aria-hidden="true"></i> Zainstaluj MCP</a>
+      </div>
+    </div>
+    <div class="hx-stage-box">
+      <div class="ss-stage hx-stage" id="hx-stage" data-mark="listen" role="img" aria-label="Animacja: klient mówi „Trzy bilety do ZOO na sobotę”, agent liczy koszyk 121,00 zł, płatność BLIK zostaje potwierdzona, a bilet z kodem QR pojawia się w telefonie.">
+        <div class="hx-obj">
+{{PHONE}}
+        </div>
+{{TOAST}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="v4-clients" id="klienci" aria-label="Klienci i metody płatności">
+  <div class="wrap">
+    <p>Płatności Paymove przyjmują już:</p>
+    <div class="logos">
+{{CLIENTS}}
+      <div class="pays" data-logo-row>
+        <img src="assets/img/blik-badge.svg" alt="BLIK" width="49" height="24">
+        <img src="assets/img/applepay-mark.svg" alt="Apple Pay" width="38" height="24">
+        <img src="assets/img/gpay-white.svg" alt="Google Pay" width="62" height="24">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="filary" class="v4-filary" data-phi-section>
+  <div class="wrap">
+    <div class="head" data-phi-head data-reveal>
+      <h2>Trzy sposoby, by agent zapłacił.</h2>
+    </div>
+    <div class="carousel" id="filary-car" aria-roledescription="karuzela" aria-label="Trzy filary">
+      <div class="bento" data-track tabindex="0" aria-label="Filary, przewiń w bok">
+        <article class="tile t-voice" id="tile-glos" aria-label="Płatności głosowe" data-reveal>
+          <div class="tile-copy">
+            <span class="chip"><i class="ri-mic-line" aria-hidden="true"></i></span>
+            <h3>Płatności głosowe</h3>
+            <p>Klient mówi, agent liczy koszyk.</p>
+          </div>
+          <div class="tile-stage">
+            <div class="mphone mock" data-mock aria-hidden="true">
+              <div class="mscreen">
+                <img class="p-logo" src="assets/img/logo-white.svg" alt="" width="70" height="12">
+                <div class="pb in">Razem 121,00 zł. Płacisz BLIK-iem?</div>
+                <div class="pb out">Tak.</div>
+                <div class="sheet">
+                  <span class="grab"></span>
+                  <div class="sh-t">Podsumowanie</div>
+                  <div class="sh-r"><span>2 × Normalny</span><b class="mono">90,00 zł</b></div>
+                  <div class="sh-r"><span>1 × Ulgowy</span><b class="mono">30,00 zł</b></div>
+                  <div class="sh-r"><span>Opłata</span><b class="mono">1,00 zł</b></div>
+                  <div class="sh-tot"><span>Razem</span><b class="mono">121,00 zł</b></div>
+                  <div class="sh-btn"><img src="assets/img/blik-badge.svg" alt="" width="33" height="16">Zapłać 121,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="tile t-checkout" id="tile-checkout" aria-label="Agentyczny checkout" data-reveal>
+          <div class="tile-copy">
+            <span class="chip"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></span>
+            <h3>Agentyczny checkout</h3>
+            <p>Agent czyta katalog i składa koszyk.</p>
+          </div>
+          <div class="tile-stage">
+            <div class="codewin mock" data-mock aria-hidden="true">
+              <div class="mono"><span class="dot-ok"></span>search-public-products</div>
+              <div class="mono"><span class="k">"city"</span>: <span class="s">"Gdańsk"</span></div>
+              <div class="mono">→ <span class="s">ZOO · bilet normalny</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="tile t-chat" id="tile-czat" aria-label="Płatności w czacie" data-reveal>
+          <div class="tile-copy">
+            <span class="chip"><i class="ri-chat-smile-2-line" aria-hidden="true"></i></span>
+            <h3>Płatności w czacie</h3>
+            <p>Płacisz w rozmowie z Claude.</p>
+          </div>
+          <div class="tile-stage">
+            <div class="chatwin mock" data-mock aria-hidden="true">
+              <div class="cb">Kup 3 bilety do ZOO na sobotę.</div>
+              <div class="widget">
+                <div class="wg-row"><span>Do zapłaty</span><b>121,00 zł</b></div>
+                <div class="wg-btn"><img src="assets/img/blik-badge.svg" alt="" width="33" height="16">Zapłać</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="car-ctl">
+        <div class="dots" role="group" aria-label="Wybierz filar"></div>
+        <div class="arrows">
+          <button class="icon-btn" data-prev aria-label="Poprzedni filar"><i class="ri-arrow-left-line" aria-hidden="true"></i></button>
+          <button class="icon-btn" data-next aria-label="Następny filar"><i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="v4-glos glos" id="glos" data-phi-section>
+  <div class="wrap">
+    <div class="head center" data-phi-head data-reveal>
+      <h2>Powiedz, co chcesz kupić.</h2>
+      <div class="seg" role="tablist" aria-label="Scenariusz">
+        <button role="tab" id="t-zoo" aria-selected="true" aria-controls="voice-panel" data-scn="zoo"><span class="d-only">ZOO · bilety</span><span class="m-only">ZOO</span></button>
+        <button role="tab" id="t-park" aria-selected="false" aria-controls="voice-panel" data-scn="park" tabindex="-1"><span class="d-only">Parking · Dworzec Centralny</span><span class="m-only">Parking</span></button>
+      </div>
+    </div>
+    <div class="voice-panel ss-stage" id="voice-panel" role="tabpanel" aria-labelledby="t-zoo">
+      <div class="vp-view">
+      <div class="mphone mock" data-mock aria-hidden="true" id="mock-cart">
+        <div class="mscreen">
+          <img class="p-logo" src="assets/img/logo-white.svg" alt="" width="70" height="12">
+          <div class="pb out" data-k="pq">Poproszę dwa normalne i jeden ulgowy.</div>
+          <div class="pb in" data-k="a1">Razem 121,00 zł. Płacisz BLIK-iem?</div>
+          <div class="sheet">
+            <span class="grab"></span>
+            <div class="sh-t" data-k="ct">Bilety wstępu</div>
+            <div class="item"><span class="it-ico"><i class="ri-user-line" data-ki="i1"></i></span><span class="it-txt"><b data-k="r1">Normalny</b><span class="mono" data-k="p1">45,00 zł</span></span><span class="stepper"><i>−</i><span data-k="q1">2</span><i class="plus">+</i></span></div>
+            <div class="item"><span class="it-ico"><i class="ri-bear-smile-line" data-ki="i2"></i></span><span class="it-txt"><b data-k="r2">Ulgowy</b><span class="mono" data-k="p2">30,00 zł</span></span><span class="stepper"><i>−</i><span data-k="q2">1</span><i class="plus">+</i></span></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="vbar" id="mock-voice">
+        <span class="vb-t"><span data-k="t">ZOO</span> · <b data-k="amt">121,00 zł</b></span>
+        <button class="paybar" type="button" data-pay><span class="pb-mic"><i class="ri-mic-fill" aria-hidden="true"></i></span><span class="pb-l">Zapłać głosowo</span></button>
+      </div>
+    </div>
+    <ol class="steps" data-reveal>
+      <li class="step"><div class="step-t">Skan QR</div><p>Przy tablicy QR albo na stronie.</p></li>
+      <li class="step"><div class="step-t">Rozmowa</div><p>Agent zna cennik i liczy koszyk.</p></li>
+      <li class="step"><div class="step-t">Zatwierdzenie</div><p>Płacisz BLIK-iem.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="v4-dev dev" id="deweloperzy" data-phi-section>
+  <div class="wrap">
+    <div class="head center" data-phi-head data-reveal>
+      <h2>Jedna komenda. 615 usług dla <span class="d-only">Twojego </span>agenta.</h2>
+      <p class="lead">Działa z Claude Code, Cursorem i każdym klientem MCP.</p>
+    </div>
+    <div class="term-obj" data-reveal>
+      <div class="term mock" data-mock id="mock-term">
+        <div class="term-bar">
+          <div class="ttabs" role="tablist" aria-label="Klient MCP">
+            <button role="tab" aria-selected="true" aria-controls="term-body" data-cli="claude">Claude Code</button>
+            <button role="tab" aria-selected="false" aria-controls="term-body" data-cli="cursor" tabindex="-1">Cursor</button>
+            <button role="tab" aria-selected="false" aria-controls="term-body" data-cli="partner" tabindex="-1">Partner</button>
+          </div>
+          <button class="copy-btn" data-copy="#term-cmd"><i class="ri-file-copy-line" aria-hidden="true"></i><span>Kopiuj</span></button>
+        </div>
+        <div class="term-body mono" id="term-body" role="tabpanel">
+          <div class="cmd"><b>$</b><span id="term-cmd">claude mcp add --transport http <em>paymove</em> <u>https://api.paymove.io/api/mcp</u></span></div>
+          <div class="out" id="term-out">
+            <div class="ok">→ Połączono · 20 narzędzi</div>
+            <div class="tool"><span class="ok">✓</span><b>search-public-products</b><span class="d-only">szukaj usług w miastach</span></div>
+            <div class="tool"><span class="ok">✓</span><b>parking-get-pricing</b><span class="d-only">cennik strefy parkingowej</span></div>
+            <div class="tool"><span class="ok">✓</span><b>go-get-product</b><span class="d-only">szczegóły produktu GO</span></div>
+            <div class="more">… i 17 kolejnych</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dev-foot" data-reveal>
+      <ul class="checks">
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Bez klucza: usługi i cenniki.</span></li>
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Z kluczem: produkty PAY i GO.</span></li>
+      </ul>
+      <a class="link" href="https://docs.paymove.io/">Dokumentacja MCP <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="v4-liczby liczby" id="liczby" data-phi-section>
+  <div class="wrap">
+    <div class="head" data-phi-head data-reveal>
+      <h2>Agent startuje z gotową siecią płatności.</h2>
+    </div>
+    <div class="stats">
+      <div class="stat stat-xl" data-reveal><div class="stat-n">615</div><div class="stat-l">usług</div></div>
+      <div class="stat-side">
+        <div class="stat" data-reveal><div class="stat-n">69</div><div class="stat-l">miast</div></div>
+        <div class="stat" data-reveal><div class="stat-n">20</div><div class="stat-l">narzędzi MCP</div></div>
+      </div>
+    </div>
+    <small class="source mono">Źródło: katalog MCP, 2026.</small>
+  </div>
+</section>
+
+<section class="v4-ctrl ctrl" id="kontrola" data-phi-section>
+  <div class="wrap ctrl-grid">
+    <div class="ctrl-copy" data-reveal>
+      <h2>Agent proponuje. Płacisz Ty.</h2>
+      <ul class="checks">
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Każda płatność to osobny BLIK.</span></li>
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Potwierdzasz ją w aplikacji banku.</span></li>
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Historia płatności w Agent Panel.</span></li>
+      </ul>
+    </div>
+    <div class="ctrl-stage ss-stage" id="ctrl-stage">
+      <div class="wallet mock" data-mock id="mock-wallet">
+        <div class="w-head">
+          <div><div class="w-name">Agent Panel</div><div class="mono w-id">claude-desktop</div></div>
+          <span class="w-status mono"><span class="dot"></span><span>Połączony</span></span>
+        </div>
+        <div class="w-sec mono">Historia</div>
+        <div class="w-hist" id="w-hist">
+          <div class="h-row"><div><div class="w-strong">Parking · strefa A</div><div class="w-sub">wczoraj · BLIK</div></div><div class="h-amt"><b>12,00 zł</b><span>Potwierdzone</span></div></div>
+        </div>
+        <div class="w-sec mono">Do zatwierdzenia · <span id="w-pend-n">1</span></div>
+        <div class="w-pend" id="w-pend">
+          <div class="wp-top"><div><div class="w-strong">ZOO Gdańsk · 3 bilety</div><div class="w-sub">Agent czeka na kod BLIK</div><button class="w-link w-more" type="button" aria-pressed="false" aria-controls="w-cart" id="w-more">Pokaż koszyk</button></div><b class="wp-amt">121,00 zł</b></div>
+          <div class="w-cart" id="w-cart" hidden><div class="wc-r"><span>2 × Normalny</span><b class="mono">90,00 zł</b></div><div class="wc-r"><span>1 × Ulgowy</span><b class="mono">30,00 zł</b></div><div class="wc-r"><span>Opłata</span><b class="mono">1,00 zł</b></div></div>
+          <div class="acts"><button class="w-btn ghost" type="button" data-act="reject">Odrzuć</button><button class="w-btn" type="button" data-act="approve"><img src="assets/img/blik-badge.svg" alt="" width="33" height="16">Zatwierdź</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="premiera" class="v4-premiera premiera" data-phi-section>
+  <div class="wrap">
+    <div class="head center" data-phi-head data-reveal>
+      <h2>Co działa dziś, a co wkrótce.</h2>
+    </div>
+    <div class="rail-box" data-reveal>
+      <div class="rail" aria-hidden="true"><span class="rail-fill"></span></div>
+      <ol class="timeline">
+        <li class="ms done"><span class="node" aria-hidden="true"></span><span class="when mono">Działa</span><span class="ms-t">MCP: 615 usług</span></li>
+        <li class="ms done"><span class="node" aria-hidden="true"></span><span class="when mono">Działa</span><span class="ms-t">BLIK z potwierdzeniem</span></li>
+        <li class="ms now"><span class="node" aria-hidden="true"></span><span class="when mono">Sandbox</span><span class="ms-t">Płatności x402</span></li>
+        <li class="ms next"><span class="node" aria-hidden="true"></span><span class="when mono">Wkrótce</span><span class="ms-t">Limity i zamrażanie</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="v4-start start" id="start" data-phi-section>
+  <div class="wrap">
+    <div class="head center" data-phi-head data-reveal>
+      <h2>Twój agent płaci. Ty potwierdzasz.</h2>
+      <p class="lead">Aktywacja i abonament 0 zł. Prowizja 1,29%.</p>
+      <div class="ctas">
+        <a class="btn btn-metal" href="mailto:tomasz.gesior@paymove.io?subject=Agentic%20Stack%20%E2%80%94%20premiera">Dołącz do premiery <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost" href="#deweloperzy">Zainstaluj MCP <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="install"><code class="mono" id="install-cmd">$ claude mcp add --transport http paymove <span class="br"></span>https://api.paymove.io/api/mcp</code></div>
+  </div>
+</section>
+</main>
+
+<footer class="v4-footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand"><img src="assets/img/logo-white.svg" alt="Paymove" width="114" height="20"><span>Płatności dla ludzi i ich agentów.</span></div>
+      <div class="f-cols">
+        <div class="f-col"><span class="f-h mono">Agentic Stack</span><a href="#tile-glos">Płatności głosowe</a><a href="#tile-checkout">Agentyczny checkout</a><a href="#tile-czat">Płatności w czacie</a></div>
+        <div class="f-col"><span class="f-h mono">Deweloperzy</span><a href="#deweloperzy">Serwer MCP</a><a href="https://docs.paymove.io/">Dokumentacja</a><a href="#kontrola">Agent Panel</a></div>
+        <div class="f-col"><span class="f-h mono">Paymove</span><a href="https://www.paymove.io/">paymove.io</a><a href="https://www.paymove.io/">Cennik</a><a href="https://www.paymove.io/">Zaloguj</a></div>
+      </div>
+    </div>
+    <div class="f-bot mono"><span>© 2026 Paymove</span><span>Regulamin · Polityka prywatności</span></div>
+  </div>
+</footer>
+<script src="assets/hero-motion.js" defer></script>
+<script src="assets/app-v41.js" defer></script>
+<script src="assets/v4.js" defer></script>
+</body>
+</html>
