@@ -4,16 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta name="paymove-www-version" content="v3.1">
-<title>Paymove Agentic Stack · płatności dla agentów AI (podgląd v3.1)</title>
-<meta name="description" content="Agent AI kupuje głosem, w czacie albo przez API. Ty zatwierdzasz BLIK-iem.">
+<meta name="paymove-www-version" content="v4">
+<title>Paymove Agentic Stack · płatności dla agentów AI (podgląd v4)</title>
+<meta name="description" content="Powiedz, co kupić. Agent AI składa koszyk, Ty zatwierdzasz BLIK-iem.">
 <link rel="preload" href="assets/fonts/Geologica-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="assets/tokens.css">
 <link rel="stylesheet" href="assets/icons/remixicon.css">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/hero-base.css">
+<link rel="stylesheet" href="assets/hero-a.css">
+<link rel="stylesheet" href="assets/v4.css">
 <link rel="icon" href="assets/img/sygnet.svg">
 </head>
-<body data-version="v3.1">
+<body class="hx hx-a v4 theme-dark" data-version="v4">
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="nav theme-dark" id="top">
   <div class="wrap">
@@ -27,43 +29,56 @@
   </div>
 </header>
 <main id="main">
-<section class="hero theme-dark" id="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow mono">Paymove Agentic Stack</div>
-      <h1>„Trzy bilety do ZOO na sobotę.” <span>Zapłacone.</span></h1>
-      <p class="lead"><span class="d-only">Agent AI kupuje głosem, w czacie albo przez API. Ty zatwierdzasz BLIK-iem. 615 usług, 69 miast.</span><span class="m-only">Agent kupuje głosem albo w czacie. Ty zatwierdzasz BLIK-iem.</span></p>
+<section class="hx-hero" id="hero">
+  <div class="wrap hx-grid">
+    <div class="hx-copy">
+      <h1>Powiedz, co&nbsp;kupić. <span>Agent zapłaci.</span></h1>
+      <p class="lead">Agent AI składa koszyk w&nbsp;615 usługach. Ty potwierdzasz jednym BLIK-iem.</p>
       <div class="ctas">
         <a class="btn btn-metal glow" href="#start">Dołącz do premiery <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
         <a class="btn btn-ghost" href="#deweloperzy"><i class="ri-terminal-box-line" aria-hidden="true"></i> Zainstaluj MCP</a>
       </div>
     </div>
-    <div class="hero-stage ss-stage" id="mock-hero">
-      <div class="phone phone-light theme-light mock" data-mock aria-hidden="true">
-        <div class="screen">
-          <div class="ok-ring"><i class="ri-check-line"></i></div>
-          <div class="p-title">Płatność potwierdzona</div>
-          <div class="ticket-card">
-            <svg class="arcs" viewBox="0 0 200 200" aria-hidden="true"><circle cx="200" cy="0" r="60"/><circle cx="200" cy="0" r="100"/><circle cx="200" cy="0" r="140"/><circle cx="200" cy="0" r="180"/></svg>
-            <div class="tc-top"><img src="assets/img/logo-ink.svg" alt="" width="80" height="14"><span class="mono tc-kind">Bilet wstępu</span></div>
-            <div class="tc-name">ZOO — bilety wstępu</div>
-            <div class="tc-sub">2 × Normalny · 1 × Ulgowy</div>
-            <div class="tc-meta"><div><span>Data</span><b>sob. 7.11.2026</b></div><div><span>Wejście</span><b>do 17:00</b></div><div><span>Osoby</span><b>3</b></div></div>
-            <div class="tc-cut"></div>
-            <div class="tc-bottom">
-              <div class="tc-qr"><img src="assets/img/qr.svg" alt="" width="84" height="84"></div>
-              <div class="tc-info"><span>Nr biletu</span><b class="mono">ZOO-2611-0001</b><span>Zapłacono</span><b class="mono">121,00 zł · BLIK</b><em>Bilet jednorazowy. Pokaż kod przy wejściu.</em></div>
-            </div>
+    <div class="hx-stage-box">
+      <div class="ss-stage hx-stage" id="hx-stage" data-mark="listen" role="img" aria-label="Animacja: klient mówi „Trzy bilety do ZOO na sobotę”, agent liczy koszyk 121,00 zł, płatność BLIK zostaje potwierdzona, a bilet z kodem QR pojawia się w telefonie.">
+        <div class="hx-spot" aria-hidden="true"></div>
+        <div class="hx-plinth" aria-hidden="true"></div>
+        <div class="hx-obj">
+      <div class="hx-phone theme-dark" data-mock>
+        <div class="hx-screen">
+          <div class="hx-top"><img src="assets/img/sygnet.svg" alt="" width="20" height="20"><b>Paymove</b><span class="hx-live mono"><em></em><span class="lv lv-1">słucha</span><span class="lv lv-2">płacę</span><span class="lv lv-3">gotowe</span></span></div>
+          <div class="hx-talk">
+            <p class="hx-q"><span style="--i:0">„Trzy</span> <span style="--i:1">bilety</span> <span style="--i:2">do</span> <span style="--i:3">ZOO</span> <span style="--i:4">na</span> <span style="--i:5">sobotę.”</span></p>
+            <div class="hx-wave"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i><i style="--i:20"></i><i style="--i:21"></i><i style="--i:22"></i><i style="--i:23"></i></div>
+            <div class="fsp"></div>
+            <div class="hx-cart"><span class="mono">Koszyk</span><div class="hx-cr"><span>2 × Normalny</span><b>90,00 zł</b></div><div class="hx-cr"><span>1 × Ulgowy</span><b>30,00 zł</b></div><div class="hx-cr"><span>Opłata</span><b>1,00 zł</b></div><div class="hx-ct"><span>Razem</span><b>121,00 zł</b></div></div>
           </div>
-          <div class="fsp" aria-hidden="true"></div><div class="p-actions"><span class="p-act"><i class="ri-file-pdf-2-line"></i>Pobierz PDF</span><span class="p-act"><i class="ri-mail-line"></i>Wyślij ponownie</span></div>
-          <div class="home-ind"></div>
+          <div class="hx-ticket theme-light">
+            <div class="tk-hero"><div class="tk-top"><img src="assets/img/logo-ink.svg" alt="" width="80" height="14"><i class="ri-bear-smile-line" aria-hidden="true"></i></div><div class="fsp"></div><div class="tk-id"><div class="tk-name">ZOO · wstęp</div><div class="tk-meta"><div><span>Data</span><b>sob. 7.11</b></div><div><span>Osoby</span><b>3</b></div></div></div></div>
+            <div class="tk-cut"></div>
+            <div class="tk-bot"><img class="tk-qr" src="assets/img/qr.svg" alt="" width="112" height="112"><div class="tk-info"><b class="mono">121,00 zł</b></div></div>
+            <div class="hx-acts"><span><i class="ri-file-pdf-2-line"></i>PDF</span></div>
+          </div>
+          <div class="hx-sheet">
+            <div class="hx-grab"></div>
+            <div class="hx-sh-h"><img src="assets/img/blik-badge.svg" alt="BLIK" width="49" height="24"><span>Potwierdź w banku</span></div>
+            <div class="hx-ring-box">
+              <svg class="hx-ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="r-bg" cx="60" cy="60" r="54"/><circle class="r-fg" cx="60" cy="60" r="54" pathLength="100"/></svg>
+              <div class="hx-ring-c"><b>121,00 zł</b><span>ZOO · 3 bilety</span></div>
+            </div>
+            <div class="hx-sh-st"><span class="st-wait">Czekam na bank…</span><span class="st-ok"><i class="ri-check-line"></i>Zapłacono</span></div>
+          </div>
         </div>
+      </div>
+        </div>
+        <div class="hx-toast hx-glass" data-mock><span class="hx-ok"><i class="ri-check-line"></i></span><div><b>Zapłacono BLIK-iem</b><span>121,00 zł</span></div></div>
+        <div class="hx-wallet hx-glass" data-mock><div class="hw-h"><b>Agent Wallet</b></div><div class="hw-amt"><b>121,40 zł</b><span>/ 300 zł</span></div><div class="hw-bar"><i></i></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="clients" id="klienci" aria-label="Klienci i metody płatności">
+<section class="v4-clients" id="klienci" aria-label="Klienci i metody płatności">
   <div class="wrap">
     <p>Paymove działa już w 615 usługach.</p>
     <div class="logos">
@@ -72,29 +87,30 @@
       <div class="pays" data-logo-row>
         <img src="assets/img/blik-badge.svg" alt="BLIK" width="49" height="24">
         <img src="assets/img/applepay-mark.svg" alt="Apple Pay" width="38" height="24">
-        <img src="assets/img/gpay.svg" alt="Google Pay" width="62" height="24">
+        <img src="assets/img/gpay-white.svg" alt="Google Pay" width="62" height="24">
       </div>
     </div>
   </div>
 </section>
 
-<section id="filary" data-phi-section>
+<section id="filary" class="v4-filary" data-phi-section>
   <div class="wrap">
-    <div class="head" data-phi-head>
+    <div class="head" data-phi-head data-reveal>
       <h2>Cztery sposoby, by agent zapłacił.</h2>
     </div>
     <div class="carousel" id="filary-car" aria-roledescription="karuzela" aria-label="Cztery filary">
       <div class="bento" data-track tabindex="0" aria-label="Filary, przewiń w bok">
-        <article class="tile tile-wide t-voice" id="tile-glos" aria-label="Płatności głosowe">
+        <article class="tile t-voice" id="tile-glos" aria-label="Płatności głosowe" data-reveal>
           <div class="tile-copy">
             <span class="chip"><i class="ri-mic-line" aria-hidden="true"></i></span>
-            <h3><span class="d-only">Płatności głosowe</span><span class="m-only">Głos. <em>Klient mówi, agent liczy.</em></span></h3>
-            <p class="d-only">Klient mówi, agent liczy.</p>
+            <h3>Płatności głosowe</h3>
+            <p>Klient mówi, agent liczy.</p>
           </div>
           <div class="tile-stage">
-            <div class="phone phone-dark phone-sm theme-dark mock" data-mock aria-hidden="true">
-              <div class="screen">
-                <img class="p-logo" src="assets/img/logo-white.svg" alt="" width="58" height="10">
+            <div class="tv-glow" aria-hidden="true"></div>
+            <div class="mphone mock" data-mock aria-hidden="true" data-parallax="-0.03">
+              <div class="mscreen">
+                <img class="p-logo" src="assets/img/logo-white.svg" alt="" width="70" height="12">
                 <div class="pb in">Razem 121,00 zł. Płacisz?</div>
                 <div class="pb out">Tak, płacę.</div>
                 <div class="sheet">
@@ -104,62 +120,52 @@
                   <div class="sh-r"><span>1 × Ulgowy</span><b class="mono">30,00 zł</b></div>
                   <div class="sh-r"><span>Opłata</span><b class="mono">1,00 zł</b></div>
                   <div class="sh-tot"><span>Razem</span><b class="mono">121,00 zł</b></div>
-                  <div class="sh-btn"><i class="ri-wallet-3-line"></i>Przejdź do płatności<i class="ri-arrow-right-line"></i></div>
+                  <div class="fsp"></div>
+                  <div class="sh-btn"><img src="assets/img/blik-badge.svg" alt="" width="33" height="16">Zapłać 121,00 zł</div>
                 </div>
-                <div class="home-ind"></div>
               </div>
             </div>
           </div>
         </article>
-        <article class="tile t-checkout" id="tile-checkout" aria-label="Agentyczny checkout">
+        <article class="tile t-checkout" id="tile-checkout" aria-label="Agentyczny checkout" data-reveal>
           <div class="tile-copy">
             <span class="chip"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></span>
-            <h3><span class="d-only">Agentyczny checkout</span><span class="m-only">Checkout. <em>Agent składa koszyk.</em></span></h3>
-            <p class="d-only">Agent czyta cennik i składa koszyk.</p>
+            <h3>Agentyczny checkout</h3>
+            <p>Agent czyta cennik i składa koszyk.</p>
           </div>
           <div class="tile-stage">
-            <div class="codewin theme-dark mock" data-mock aria-hidden="true">
-              <div class="mono"><span class="dot-ok"></span> GET /.well-known/paymove-manifest.json</div>
-              <div class="mono">{</div>
-              <div class="mono">&nbsp;&nbsp;<span class="k">"merchant"</span>: <span class="s">"ZOO Gdańsk"</span>,</div>
-              <div class="mono">&nbsp;&nbsp;<span class="k">"amount"</span>: <span class="s">"121.00 PLN"</span></div>
-              <div class="mono">}</div>
+            <div class="codewin mock" data-mock aria-hidden="true">
+              <div class="mono"><span class="dot-ok"></span>GET /.well-known/paymove-manifest.json</div>
+              <div class="mono"><span class="k">"merchant"</span>: <span class="s">"ZOO Gdańsk"</span></div>
+              <div class="mono"><span class="k">"amount"</span>: <span class="s">"121.00 PLN"</span></div>
             </div>
           </div>
         </article>
-        <article class="tile t-x402 theme-dark" id="tile-x402" aria-label="Płatności x402">
+        <article class="tile t-x402" id="tile-x402" aria-label="Płatności x402" data-reveal>
           <div class="tile-copy">
             <span class="chip"><i class="ri-wallet-3-line" aria-hidden="true"></i></span>
-            <h3><span class="d-only">Płatności x402</span><span class="m-only">x402. <em>Agent płaci za API.</em></span></h3>
-            <p class="d-only">Agent płaci za API w swoim limicie.</p>
+            <h3>Płatności x402</h3>
+            <p>Agent płaci za API w swoim limicie.</p>
           </div>
           <div class="tile-stage">
-            <div class="cards mock" data-mock aria-hidden="true">
-              <div class="vcard vc-cobalt"><b>121,00 zł</b><i class="ri-wallet-3-line"></i></div>
-              <div class="vcard vc-white theme-light"><b>480,00 zł</b><i class="ri-wallet-3-line"></i></div>
-              <div class="vcard vc-graphite"><b>1 250,00 zł</b><i class="ri-wallet-3-line"></i><div class="vc-foot"><img src="assets/img/logo-white.svg" alt="" width="64" height="11"><span class="mono">•••• 2048</span></div></div>
+            <div class="x402 mock" data-mock aria-hidden="true">
+              <div class="x-row"><span class="mono">HTTP 402 · API pogody</span><b>0,40 zł</b><i class="ri-check-line"></i></div>
+              <div class="x-meter"><span></span></div>
+              <div class="x-foot"><span>Limit dzienny</span><b>300,00 zł</b></div>
             </div>
           </div>
         </article>
-        <article class="tile tile-wide t-chat" id="tile-czat" aria-label="Płatności w czacie">
+        <article class="tile t-chat" id="tile-czat" aria-label="Płatności w czacie" data-reveal>
           <div class="tile-copy">
             <span class="chip"><i class="ri-chat-smile-2-line" aria-hidden="true"></i></span>
-            <h3><span class="d-only">Płatności w czacie</span><span class="m-only">Czat. <em>Płatność w ChatGPT i Claude.</em></span></h3>
-            <p class="d-only">Płatność Paymove w ChatGPT i Claude.</p>
-            <div class="pays sm d-only" data-logo-row>
-              <img src="assets/img/blik-badge.svg" alt="BLIK" width="37" height="18">
-              <img src="assets/img/applepay-mark.svg" alt="Apple Pay" width="28" height="18">
-              <img src="assets/img/gpay.svg" alt="Google Pay" width="46" height="18">
-            </div>
+            <h3>Płatności w ChatGPT i Claude</h3>
           </div>
           <div class="tile-stage">
             <div class="chatwin mock" data-mock aria-hidden="true">
               <div class="cb">Kup 3 bilety do ZOO na sobotę.</div>
               <div class="widget">
-                <div class="wg-brand">Paymove</div>
                 <div class="wg-row"><span>Do zapłaty</span><b>121,00 zł</b></div>
-                <div class="wg-method"><img src="assets/img/blik-badge.svg" alt="BLIK" width="29" height="14"><span class="mono">BLIK ••• 204</span></div>
-                <div class="wg-btn">Zapłać 121,00 zł <i class="ri-arrow-right-line"></i></div>
+                <div class="wg-btn"><img src="assets/img/blik-badge.svg" alt="" width="33" height="16">Zapłać</div>
               </div>
             </div>
           </div>
@@ -176,19 +182,20 @@
   </div>
 </section>
 
-<section class="theme-dark glos" id="glos" data-phi-section>
+<section class="v4-glos glos" id="glos" data-phi-section>
   <div class="wrap">
-    <div class="head center" data-phi-head>
+    <div class="head center" data-phi-head data-reveal>
       <h2>Powiedz, co chcesz kupić.</h2>
       <div class="seg" role="tablist" aria-label="Scenariusz">
         <button role="tab" id="t-zoo" aria-selected="true" aria-controls="voice-panel" data-scn="zoo"><span class="d-only">ZOO · bilety</span><span class="m-only">ZOO</span></button>
         <button role="tab" id="t-park" aria-selected="false" aria-controls="voice-panel" data-scn="park" tabindex="-1"><span class="d-only">Parking · Dworzec Centralny</span><span class="m-only">Parking</span></button>
       </div>
     </div>
-    <div class="voice-panel" id="voice-panel" role="tabpanel" aria-labelledby="t-zoo">
+    <div class="voice-panel ss-stage" id="voice-panel" role="tabpanel" aria-labelledby="t-zoo">
       <div class="vp-phone">
-        <div class="phone phone-dark mock" data-mock aria-hidden="true" id="mock-cart">
-          <div class="screen">
+        <div class="vp-halo" aria-hidden="true"></div>
+        <div class="mphone mock" data-mock aria-hidden="true" id="mock-cart" data-parallax="-0.03">
+          <div class="mscreen">
             <img class="p-logo" src="assets/img/logo-white.svg" alt="" width="70" height="12">
             <div class="pb out" data-k="pq">Poproszę dwa normalne i jeden ulgowy.</div>
             <div class="pb in">Dodano. Coś jeszcze?</div>
@@ -197,41 +204,40 @@
               <div class="sh-t" data-k="ct">Bilety wstępu</div>
               <div class="item"><span class="it-ico"><i class="ri-user-line" data-ki="i1"></i></span><div class="it-txt"><b data-k="r1">Normalny</b><span data-k="d1">Dorośli 18+</span></div><div class="it-r"><b class="mono" data-k="p1">45,00 zł</b><span class="stepper"><i>−</i><span data-k="q1">2</span><i class="plus">+</i></span></div></div>
               <div class="item"><span class="it-ico"><i class="ri-bear-smile-line" data-ki="i2"></i></span><div class="it-txt"><b data-k="r2">Ulgowy</b><span data-k="d2">Dzieci 3–18 lat</span></div><div class="it-r"><b class="mono" data-k="p2">30,00 zł</b><span class="stepper"><i>−</i><span data-k="q2">1</span><i class="plus">+</i></span></div></div>
-              <div class="fsp" aria-hidden="true"></div><div class="cartbar"><span class="mic"><i class="ri-mic-line"></i></span><span class="cart-pill theme-light"><span class="cnt" data-k="cnt">3</span>Koszyk<b class="mono" data-k="tot">121,00 zł</b><i class="ri-arrow-right-line"></i></span></div>
+              <div class="cartbar"><span class="mic"><i class="ri-mic-line"></i></span><span class="cart-pill theme-light"><span class="cnt" data-k="cnt">3</span>Koszyk<b class="mono" data-k="tot">121,00 zł</b></span></div>
             </div>
-            <div class="home-ind"></div>
           </div>
         </div>
       </div>
       <div class="convo" id="mock-voice">
-        <div class="line client"><span class="who mono">Klient</span><span class="bubble" data-k="c1">Dwa normalne i jeden ulgowy na sobotę.</span></div>
-        <div class="line agent"><span class="who mono">Agent</span><span class="bubble" data-k="a1">Razem 121,00 zł. Płacisz BLIK-iem?</span></div>
-        <div class="line client"><span class="who mono">Klient</span><span class="bubble" data-k="c2">Tak.</span></div>
-        <div class="sum"><span data-k="t">ZOO · 2 normalne + 1 ulgowy</span><b data-k="amt">121,00 zł</b></div>
-        <button class="paybar" type="button" data-pay><span class="pb-mic"><i class="ri-mic-fill" aria-hidden="true"></i></span><span class="pb-l">Zapłać głosowo</span><img class="pb-sig" src="assets/img/sygnet.svg" alt="" width="16" height="16"></button>
+        <div class="cv-l">
+          <div class="line client"><span class="who mono">Klient</span><span class="bubble" data-k="c1">Dwa normalne i jeden ulgowy na sobotę.</span></div>
+          <div class="line client"><span class="who mono">Klient</span><span class="bubble" data-k="c2">Tak.</span></div>
+        </div>
+        <div class="cv-r">
+          <div class="line agent"><span class="who mono">Agent</span><span class="bubble" data-k="a1">Razem 121,00 zł. Płacisz BLIK-iem?</span></div>
+          <div class="sum"><span data-k="t">ZOO · 2 normalne + 1 ulgowy</span><b data-k="amt">121,00 zł</b></div>
+          <button class="paybar" type="button" data-pay><span class="pb-mic"><i class="ri-mic-fill" aria-hidden="true"></i></span><span class="pb-l">Zapłać głosowo</span><img class="pb-sig" src="assets/img/sygnet.svg" alt="" width="16" height="16"></button>
+        </div>
       </div>
     </div>
-    <ol class="steps">
-      <li class="step"><div class="step-t">Skan QR</div><p><span class="d-only">Zaczynasz przy tablicy QR albo na stronie.</span><span class="m-only">Przy tablicy QR albo na stronie.</span></p></li>
-      <li class="step"><div class="step-t">Rozmowa</div><p><span class="d-only">Agent zna cennik i liczy koszyk.</span><span class="m-only">Agent liczy koszyk.</span></p></li>
-      <li class="step"><div class="step-t">Zatwierdzenie</div><p><span class="d-only">Widzisz kwotę, płacisz BLIK-iem lub Apple Pay.</span><span class="m-only">Płacisz BLIK-iem lub Apple Pay.</span></p></li>
+    <ol class="steps" data-reveal>
+      <li class="step"><div class="step-t">Skan QR</div><p>Przy tablicy QR albo na stronie.</p></li>
+      <li class="step"><div class="step-t">Rozmowa</div><p>Agent zna cennik i liczy koszyk.</p></li>
+      <li class="step"><div class="step-t">Zatwierdzenie</div><p>Płacisz BLIK-iem lub Apple Pay.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="dev" id="deweloperzy">
-  <div class="wrap split">
-    <div class="copy">
+<section class="v4-dev dev" id="deweloperzy" data-phi-section>
+  <div class="wrap">
+    <div class="head center" data-phi-head data-reveal>
       <h2>Jedna komenda. 615 usług dla <span class="d-only">Twojego </span>agenta.</h2>
-      <p class="lead"><span class="d-only">Działa z Claude Code, Cursorem i każdym klientem MCP.</span><span class="m-only">Działa z Claude Code i Cursorem.</span></p>
-      <ul class="checks strong">
-        <li><i class="ri-check-line" aria-hidden="true"></i><span><span class="d-only">Bez klucza: wyszukiwanie usług i cenniki.</span><span class="m-only">Bez klucza: usługi i cenniki.</span></span></li>
-        <li><i class="ri-check-line" aria-hidden="true"></i><span><span class="d-only">Z kluczem: własne produkty PAY i GO.</span><span class="m-only">Z kluczem: produkty PAY i GO.</span></span></li>
-      </ul>
-      <a class="link" href="https://docs.paymove.io/">Dokumentacja MCP <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+      <p class="lead">Działa z Claude Code, Cursorem i każdym klientem MCP.</p>
     </div>
-    <div class="term-col">
-      <div class="term theme-dark mock" data-mock id="mock-term">
+    <div class="term-obj" data-reveal>
+      <div class="term-beam" aria-hidden="true"></div>
+      <div class="term mock" data-mock id="mock-term">
         <div class="term-bar">
           <div class="ttabs" role="tablist" aria-label="Klient MCP">
             <button role="tab" aria-selected="true" aria-controls="term-body" data-cli="claude">Claude Code</button>
@@ -251,80 +257,104 @@
           </div>
         </div>
       </div>
+      <div class="term-floor" aria-hidden="true"></div>
+    </div>
+    <div class="dev-foot" data-reveal>
+      <ul class="checks">
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Bez klucza: usługi i cenniki.</span></li>
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Z kluczem: produkty PAY i GO.</span></li>
+      </ul>
+      <a class="link" href="https://docs.paymove.io/">Dokumentacja MCP <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
     </div>
   </div>
 </section>
 
-<section class="theme-dark liczby" id="liczby" data-phi-section>
+<section class="v4-liczby liczby" id="liczby" data-phi-section>
   <div class="wrap">
-    <div class="head" data-phi-head>
-      <h2><span class="d-only">Agent startuje z gotową siecią płatności.</span><span class="m-only">Gotowa sieć płatności na start.</span></h2>
+    <div class="head" data-phi-head data-reveal>
+      <h2>Agent startuje z gotową siecią płatności.</h2>
     </div>
     <div class="stats">
-      <div class="stat"><div class="stat-n">615</div><div class="stat-l">usług</div></div>
-      <div class="stat"><div class="stat-n">69</div><div class="stat-l">miast</div></div>
-      <div class="stat"><div class="stat-n">20</div><div class="stat-l">narzędzi MCP</div></div>
+      <div class="stat stat-xl" data-reveal><div class="stat-n">615</div><div class="stat-l">usług</div></div>
+      <div class="stat-side">
+        <div class="stat" data-reveal><div class="stat-n">69</div><div class="stat-l">miast</div></div>
+        <div class="stat" data-reveal><div class="stat-n">20</div><div class="stat-l">narzędzi MCP</div></div>
+      </div>
     </div>
     <small class="source mono">Źródło: katalog MCP, 2026.</small>
   </div>
 </section>
 
-<section class="ctrl" id="kontrola">
-  <div class="wrap split g62">
-    <div class="copy">
+<section class="v4-ctrl ctrl" id="kontrola" data-phi-section>
+  <div class="wrap">
+    <div class="ctrl-head head" data-phi-head data-reveal>
       <h2>Agent płaci w limicie. Decydujesz Ty.</h2>
       <ul class="checks">
-        <li><i class="ri-check-line" aria-hidden="true"></i><span><span class="d-only">Portfel z twardymi limitami dla każdego agenta.</span><span class="m-only">Każdy agent ma portfel z limitami.</span></span></li>
-        <li><i class="ri-check-line" aria-hidden="true"></i><span><span class="d-only">Nowy sprzedawca albo limit przekroczony? Zatwierdzasz BLIK-iem.</span><span class="m-only">Nowy sprzedawca? Zatwierdzasz BLIK-iem.</span></span></li>
-        <li><i class="ri-check-line" aria-hidden="true"></i><span><span class="d-only">Pełna historia i zamrożenie portfela jednym kliknięciem.</span><span class="m-only">Historia i zamrożenie jednym kliknięciem.</span></span></li>
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Twarde limity dla każdego agenta.</span></li>
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Nowy sprzedawca? Zatwierdzasz BLIK-iem.</span></li>
+        <li><i class="ri-check-line" aria-hidden="true"></i><span>Historia i zamrożenie jednym kliknięciem.</span></li>
       </ul>
     </div>
-    <div class="wallet mock" data-mock id="mock-wallet">
-      <div class="w-head">
-        <div><div class="w-name">Agent Wallet</div><div class="mono w-id">claude-desktop</div></div>
-        <span class="w-status mono"><span class="dot"></span><span id="w-status">Aktywny</span></span>
-        <button class="w-freeze" role="switch" aria-checked="false" id="w-freeze">Zamroź</button>
+    <div class="ctrl-stage ss-stage" id="ctrl-stage">
+      <div class="mcard-box" aria-hidden="true" data-parallax="-0.05">
+        <div class="mcard">
+          <span class="mc-logo"></span>
+          <span class="mc-chip"></span>
+          <div class="mc-foot"><b>Agent Wallet</b><span class="mono">•••• 2048</span></div>
+        </div>
+        <div class="mcard-shadow"></div>
       </div>
-      <div class="w-bal">
-        <div><div class="w-lab">Saldo</div><div class="w-big">1 250,00 zł</div></div>
-        <div class="w-spent"><div class="w-sp-r"><span>Wydano dziś</span><b>121,40 zł z 300,00 zł</b></div><div class="meter"><span></span></div></div>
-      </div>
-      <div class="w-lims">
-        <div class="lim"><span>Dziennie</span><b>300,00 zł</b></div>
-        <div class="lim"><span>Na godzinę</span><b>150,00 zł</b></div>
-        <div class="lim"><span>Na sprzedawcę</span><b>200,00 zł</b></div>
-      </div>
-      <div class="w-sec mono">Do zatwierdzenia · <span id="w-pend-n">1</span></div>
-      <div class="w-pend" id="w-pend">
-        <div><div class="w-strong">Parking · Dworzec Centralny</div><div class="w-sub">nowy sprzedawca</div></div>
-        <div class="acts"><b>12,00 zł</b><button class="w-btn ghost" data-act="reject">Odrzuć</button><button class="w-btn" data-act="approve">Zatwierdź BLIK-iem</button></div>
-      </div>
-      <div class="w-sec mono">Historia</div>
-      <div class="w-hist" id="w-hist">
-        <div class="h-row"><div><div class="w-strong">ZOO Gdańsk · 3 bilety</div><div class="w-sub">dziś 9:18 · BLIK</div></div><div class="h-amt"><b>121,00 zł</b><span>Zatwierdzone</span></div></div>
-        <div class="h-row"><div><div class="w-strong">API pogody · x402</div><div class="w-sub">dziś 10:42</div></div><div class="h-amt"><b>0,40 zł</b><span>Automatycznie</span></div></div>
+      <div class="wallet mock" data-mock id="mock-wallet">
+        <div class="w-head">
+          <div><div class="w-name">Agent Wallet</div><div class="mono w-id">claude-desktop</div></div>
+          <span class="w-status mono"><span class="dot"></span><span id="w-status">Aktywny</span></span>
+          <button class="w-freeze" role="switch" aria-checked="false" id="w-freeze">Zamroź</button>
+        </div>
+        <div class="w-bal">
+          <div><div class="w-lab">Saldo</div><div class="w-big">1 250,00 zł</div></div>
+          <div class="w-spent"><div class="w-sp-r"><span>Wydano dziś</span><b>121,40 zł z 300,00 zł</b></div><div class="meter"><span></span></div></div>
+        </div>
+        <div class="w-lims">
+          <div class="lim"><span>Dziennie</span><b>300,00 zł</b></div>
+          <div class="lim"><span>Na godzinę</span><b>150,00 zł</b></div>
+          <div class="lim"><span>Na sprzedawcę</span><b>200,00 zł</b></div>
+        </div>
+        <div class="w-sec mono">Do zatwierdzenia · <span id="w-pend-n">1</span></div>
+        <div class="w-pend" id="w-pend">
+          <div><div class="w-strong">Parking · Dworzec Centralny</div><div class="w-sub">nowy sprzedawca</div></div>
+          <div class="acts"><b>12,00 zł</b><button class="w-btn ghost" data-act="reject">Odrzuć</button><button class="w-btn" data-act="approve">Zatwierdź BLIK-iem</button></div>
+        </div>
+        <div class="w-sec mono">Historia</div>
+        <div class="w-hist" id="w-hist">
+          <div class="h-row"><div><div class="w-strong">ZOO Gdańsk · 3 bilety</div><div class="w-sub">dziś 9:18 · BLIK</div></div><div class="h-amt"><b>121,00 zł</b><span>Zatwierdzone</span></div></div>
+          <div class="h-row"><div><div class="w-strong">API pogody · x402</div><div class="w-sub">dziś 10:42</div></div><div class="h-amt"><b>0,40 zł</b><span>Automatycznie</span></div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="premiera" class="premiera" data-phi-section>
+<section id="premiera" class="v4-premiera premiera" data-phi-section>
   <div class="wrap">
-    <div class="head" data-phi-head>
-      <h2><span class="d-only">Od warsztatów do produkcji w pięć tygodni.</span><span class="m-only">Produkcja w pięć tygodni.</span></h2>
+    <div class="head center" data-phi-head data-reveal>
+      <h2>Od warsztatów do produkcji w pięć tygodni.</h2>
     </div>
-    <ol class="timeline">
-      <li class="ms done"><span class="when mono">28.10.2026</span><span class="ms-t">Warsztaty</span></li>
-      <li class="ms done"><span class="when mono">Gotowe</span><span class="ms-t">Manifest i API x402</span></li>
-      <li class="ms now" aria-current="step"><span class="when mono">Teraz</span><span class="ms-t">Sandbox i MVP</span></li>
-      <li class="ms next"><span class="when mono">do 30.11.2026</span><span class="ms-t">Start produkcyjny</span></li>
-    </ol>
+    <div class="rail-box" data-reveal>
+      <div class="rail" aria-hidden="true"><span class="rail-fill"></span></div>
+      <ol class="timeline">
+        <li class="ms done"><span class="node" aria-hidden="true"></span><span class="when mono">28.10.2026</span><span class="ms-t">Warsztaty</span></li>
+        <li class="ms done"><span class="node" aria-hidden="true"></span><span class="when mono">Gotowe</span><span class="ms-t">Manifest i API x402</span></li>
+        <li class="ms now" aria-current="step"><span class="node" aria-hidden="true"></span><span class="when mono">Teraz</span><span class="ms-t">Sandbox i MVP</span></li>
+        <li class="ms next"><span class="node" aria-hidden="true"></span><span class="when mono">do 30.11.2026</span><span class="ms-t">Start produkcyjny</span></li>
+      </ol>
+    </div>
   </div>
 </section>
 
-<section class="start theme-dark" id="start" data-phi-section>
+<section class="v4-start start" id="start" data-phi-section>
+  <div class="st-halo" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="head center" data-phi-head>
+    <div class="head center" data-phi-head data-reveal>
       <h2>Pierwsza płatność agenta w listopadzie. Twoja?</h2>
       <p class="lead">Aktywacja i abonament 0 zł. Prowizja 1,29%.</p>
       <div class="ctas">
@@ -337,7 +367,7 @@
 </section>
 </main>
 
-<footer class="theme-dark">
+<footer class="v4-footer">
   <div class="wrap">
     <div class="f-grid">
       <div class="f-brand"><img src="assets/img/logo-white.svg" alt="Paymove" width="114" height="20"><span>Płatności dla ludzi i ich agentów AI.</span></div>
@@ -350,6 +380,8 @@
     <div class="f-bot mono"><span>© 2026 Paymove</span><span>Regulamin · Polityka prywatności</span></div>
   </div>
 </footer>
+<script src="assets/hero-motion.js" defer></script>
 <script src="assets/app.js" defer></script>
+<script src="assets/v4.js" defer></script>
 </body>
 </html>
