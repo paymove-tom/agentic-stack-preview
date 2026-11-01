@@ -1,4 +1,4 @@
-/* Paymove Agentic Stack · www v3 · interakcje (vanilla, bez zależności) */
+/* Paymove Agentic Stack · www v3.1 · interakcje (vanilla, bez zależności) */
 (() => {
   'use strict';
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -26,9 +26,9 @@
   /* ---------- głos: scenariusze ---------- */
   const SCN = {
     zoo: { c1: 'Dwa normalne i jeden ulgowy na sobotę.', a1: 'Razem 121,00 zł. Płacisz BLIK-iem?', c2: 'Tak.', t: 'ZOO · 2 normalne + 1 ulgowy', amt: '121,00 zł',
-      ct: 'Bilety wstępu', r1: 'Normalny', p1: '45,00 zł', q1: '2', r2: 'Ulgowy', p2: '30,00 zł', q2: '1', tot: '121,00 zł', icon: 'ri-ticket-2-fill' },
+      pq: 'Poproszę dwa normalne i jeden ulgowy.', ct: 'Bilety wstępu', r1: 'Normalny', d1: 'Dorośli 18+', p1: '45,00 zł', q1: '2', r2: 'Ulgowy', d2: 'Dzieci 3–18 lat', p2: '30,00 zł', q2: '1', cnt: '3', tot: '121,00 zł', i1: 'ri-user-line', i2: 'ri-bear-smile-line' },
     park: { c1: 'Parking przy Dworcu Centralnym na dwie godziny.', a1: 'Strefa A, 2 godziny: 12,00 zł. Płacisz BLIK-iem?', c2: 'Tak.', t: 'Parking · Dworzec Centralny · 2 h', amt: '12,00 zł',
-      ct: 'Parking · strefa A', r1: 'Pierwsza godzina', p1: '6,00 zł', q1: '1', r2: 'Kolejna godzina', p2: '6,00 zł', q2: '1', tot: '12,00 zł', icon: 'ri-parking-box-fill' },
+      pq: 'Parking przy Dworcu na dwie godziny.', ct: 'Parking · strefa A', r1: 'Pierwsza godzina', d1: 'Strefa A', p1: '6,00 zł', q1: '1', r2: 'Kolejna godzina', d2: 'Strefa A', p2: '6,00 zł', q2: '1', cnt: '2', tot: '12,00 zł', i1: 'ri-parking-box-line', i2: 'ri-time-line' },
   };
   const voice = $('#glos');
   let timers = [];
@@ -41,8 +41,8 @@
   function scenario(key) {
     const d = SCN[key];
     $$('[data-k]', voice).forEach(el => { if (d[el.dataset.k] != null) el.textContent = d[el.dataset.k]; });
-    $('.convo .sum .m-ico i', voice).className = d.icon;
-    const pay = $('[data-pay]', voice); pay.dataset.paid = 'false'; pay.querySelector('span').textContent = 'Zapłać głosowo'; pay.querySelector('i').className = 'ri-mic-fill';
+    $$('[data-ki]', voice).forEach(el => { el.className = d[el.dataset.ki]; });
+    const pay = $('[data-pay]', voice); pay.dataset.paid = 'false'; pay.querySelector('.pb-l').textContent = 'Zapłać głosowo'; pay.querySelector('i').className = 'ri-mic-fill';
     $('#voice-panel').setAttribute('aria-labelledby', key === 'zoo' ? 't-zoo' : 't-park');
     play();
   }
@@ -51,7 +51,7 @@
     $('[data-pay]', voice).addEventListener('click', e => {
       const b = e.currentTarget, paid = b.dataset.paid === 'true';
       b.dataset.paid = String(!paid);
-      b.querySelector('span').textContent = paid ? 'Zapłać głosowo' : 'Zapłacono BLIK-iem';
+      b.querySelector('.pb-l').textContent = paid ? 'Zapłać głosowo' : 'Zapłacono BLIK-iem';
       b.querySelector('i').className = paid ? 'ri-mic-fill' : 'ri-check-line';
     });
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { play(); io.disconnect(); } }), { threshold: .3 });
@@ -61,13 +61,13 @@
 
   /* ---------- terminal: klient MCP ---------- */
   const CLI = {
-    claude: 'claude mcp add --transport http paymove \\\n  https://api.paymove.io/api/mcp',
-    cursor: '{ "mcpServers": { "paymove": {\n  "url": "https://api.paymove.io/api/mcp"\n} } }',
-    partner: 'claude mcp add --transport http paymove \\\n  https://api.paymove.io/api/mcp \\\n  --header "X-API-KEY: $PAYMOVE_KEY"',
+    claude: 'claude mcp add --transport http <em>paymove</em> <u>https://api.paymove.io/api/mcp</u>',
+    cursor: '{ "mcpServers": { "<em>paymove</em>": { "url": "<u>https://api.paymove.io/api/mcp</u>" } } }',
+    partner: 'claude mcp add --transport http <em>paymove</em> <u>https://api.paymove.io/api/mcp</u> --header "X-API-KEY: $PAYMOVE_KEY"',
   };
   const term = $('#mock-term');
   if (term) tablist($('[role=tablist]', term), t => {
-    $('#term-cmd').textContent = CLI[t.dataset.cli];
+    $('#term-cmd').innerHTML = CLI[t.dataset.cli];
     $('.cmd b', term).textContent = t.dataset.cli === 'cursor' ? '' : '$';
     $('#term-out').firstElementChild.textContent = t.dataset.cli === 'partner' ? '→ Połączono z kluczem · 20 narzędzi' : '→ Połączono · 20 narzędzi';
   });
@@ -88,18 +88,25 @@
     sw.addEventListener('click', () => {
       const on = sw.getAttribute('aria-checked') !== 'true';
       sw.setAttribute('aria-checked', on); w.classList.toggle('w-frozen', on);
-      st.textContent = on ? 'Zamrożony' : 'Aktywny'; sw.lastElementChild.textContent = on ? 'Odmroź' : 'Zamroź';
+      st.textContent = on ? 'Zamrożony' : 'Aktywny'; sw.textContent = on ? 'Odmroź' : 'Zamroź';
       $$('[data-act]', w).forEach(b => b.disabled = on);
     });
     $$('[data-act]', w).forEach(b => b.addEventListener('click', () => {
       const ok = b.dataset.act === 'approve', pend = $('#w-pend', w);
-      const row = document.createElement('div'); row.className = 'm-row';
-      row.innerHTML = `<span class="m-ico"><i class="ri-parking-box-fill" aria-hidden="true"></i></span><div><div class="m-strong">Parking · Dworzec Centralny</div><div class="m-sub">teraz · ${ok ? 'BLIK' : 'odrzucone'}</div></div><div class="m-amt">12,00 zł<div class="m-sub ${ok ? 'm-ok' : ''}">${ok ? 'Zatwierdzone' : 'Odrzucone'}</div></div>`;
+      const row = document.createElement('div'); row.className = 'h-row';
+      row.innerHTML = `<div><div class="w-strong">Parking · Dworzec Centralny</div><div class="w-sub">teraz · ${ok ? 'BLIK' : 'odrzucone'}</div></div><div class="h-amt"><b>12,00 zł</b><span>${ok ? 'Zatwierdzone' : 'Odrzucone'}</span></div>`;
       $('#w-hist', w).prepend(row);
       $('#w-pend-n', w).textContent = '0';
-      pend.innerHTML = `<span class="m-ico"><i class="ri-check-double-line" aria-hidden="true"></i></span><div class="m-sub">Nic nie czeka na zatwierdzenie.</div><button class="m-btn ghost" data-reset style="margin-left:auto">Cofnij demo</button>`;
+      pend.innerHTML = `<div class="w-sub">Nic nie czeka na zatwierdzenie.</div><button class="w-btn ghost" data-reset>Cofnij demo</button>`;
       $('[data-reset]', pend).addEventListener('click', () => location.reload());
     }));
+  }
+
+  /* ---------- menu mobilne ---------- */
+  const nav = $('.nav'), mb = $('.nav-menu');
+  if (mb) {
+    mb.addEventListener('click', () => { const o = !nav.classList.contains('open'); nav.classList.toggle('open', o); mb.setAttribute('aria-expanded', o); mb.firstElementChild.className = o ? 'ri-close-line' : 'ri-menu-line'; });
+    $$('.nav-links a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); mb.firstElementChild.className = 'ri-menu-line'; }));
   }
 
   /* ---------- karuzela filarów (≤ 900 px): przyciski, kropki, klawiatura, swipe ---------- */

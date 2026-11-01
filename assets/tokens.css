@@ -86,6 +86,8 @@
   --p-red-800: #7C181A;
   --p-red-900: #461D1A;
   --p-red-950: #211312;
+}
+:root,.theme-light {
   --canvas: #EDF0F6;
   --bg: #F6F8FC;
   --bg-elevated: #F1F4FB;
