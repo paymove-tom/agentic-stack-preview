@@ -1,0 +1,43 @@
+/* Kierunek A · „Revolut Metal”: ciemna scena, reflektor z góry, srebrny telefon jako jeden obiekt na postumencie. */
+body.hx-a{background:var(--canvas)}
+.hx-a .hx-nav{background:transparent}
+.hx-a .hx-hero{position:relative;overflow:hidden;padding:24px 0 0;background:
+  radial-gradient(120% 70% at 50% -10%,var(--hero-text-a12),var(--hero-glow-fade) 55%),
+  radial-gradient(60% 40% at 50% 100%,var(--hero-glow-2),var(--hero-glow-2-fade) 70%),
+  linear-gradient(180deg,var(--hero-from),var(--canvas) 85%)}
+.hx-a .hx-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:48px}
+.hx-a .hx-copy{display:flex;flex-direction:column;align-items:center;gap:24px;max-width:960px}
+.hx-a h1{color:var(--hero-text)}
+.hx-a .ctas{justify-content:center}
+.hx-a .hx-pays{margin-top:8px;opacity:.9}
+.hx-a .hx-stage-box{width:100%}
+.hx-a .hx-stage{height:720px;width:100%}
+/* reflektor: stożek światła i plama na podłodze */
+.hx-spot{position:absolute;left:50%;top:-120px;width:1200px;height:900px;margin-left:-600px;pointer-events:none;
+  background:conic-gradient(from 180deg at 50% 0%,transparent 158deg,var(--hero-text-a06) 170deg,var(--hero-text-a12) 180deg,var(--hero-text-a06) 190deg,transparent 202deg);
+  -webkit-mask:linear-gradient(180deg,var(--hero-text) 30%,transparent 95%);mask:linear-gradient(180deg,var(--hero-text) 30%,transparent 95%);filter:blur(8px)}
+.hx-plinth{position:absolute;left:50%;bottom:0;width:720px;height:168px;margin-left:-360px;border-radius:50%;
+  background:radial-gradient(50% 50% at 50% 40%,var(--surface-hover),var(--bg) 70%,var(--canvas));
+  border:1px solid var(--hero-text-a12);box-shadow:inset 0 24px 48px -24px var(--hero-text-a22),0 -1px 0 var(--hero-text-a06)}
+/* obiekt: srebrna rama, grubość krawędzi, rim light, odbicie */
+.hx-a .hx-obj{left:50%;top:0;margin-left:-150px;animation:hx-float 6s ease-in-out infinite}
+.hx-a .hx-phone{
+  background:linear-gradient(115deg,var(--metal-4) 0%,var(--metal-1) 18%,var(--metal-2) 40%,var(--metal-4) 58%,var(--metal-3) 80%,var(--metal-2) 100%);
+  box-shadow:inset 0 0 0 1px var(--metal-edge),inset 0 2px 1px var(--hero-text),-8px 0 0 -1px var(--metal-4),-9px 0 0 -1px var(--border-strong),0 4px 12px var(--shadow-ambient),-40px 60px 80px -20px var(--shadow-key),0 0 120px -20px var(--hero-glow-2);
+  -webkit-box-reflect:below 24px linear-gradient(transparent 82%,var(--hero-text-a12))}
+.hx-a .hx-screen{background:linear-gradient(180deg,var(--surface-muted),var(--bg) 40%,var(--canvas));border-color:var(--canvas)}
+.hx-a .hx-screen::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(120deg,var(--hero-text-a06),transparent 30%)}
+.hx-a .hx-toast{left:calc(50% - 500px);top:368px}
+.hx-a .hx-wallet{left:calc(50% + 248px);top:160px}
+@media (max-width:900px){
+  .hx-a .hx-hero{padding-top:16px}
+  .hx-a .hx-grid{gap:32px}
+  .hx-a .hx-copy{gap:20px}
+  .hx-a .ctas{flex-direction:column;width:100%}.hx-a .ctas .btn{width:100%}
+  .hx-a .hx-stage{height:568px}
+  .hx-a .hx-obj{zoom:.8;margin-left:-150px}
+  .hx-spot{width:640px;margin-left:-320px}
+  .hx-plinth{width:400px;height:96px;margin-left:-200px}
+  .hx-a .hx-toast{display:none}
+  .hx-a .hx-wallet{display:none}
+}
